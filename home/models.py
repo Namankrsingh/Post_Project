@@ -30,7 +30,7 @@ class Comment(BaseModel):
 class BlogLike(BaseModel):  
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_likes")
     blog_id = models.ForeignKey(Blog, on_delete=models.CASCADE, related_name="likes")  
-    like_status = models.IntegerField(default=0)  
+    like_status = models.BooleanField(default=True)  
 
     class Meta:
         unique_together = ("user_id", "blog_id")
@@ -38,7 +38,7 @@ class BlogLike(BaseModel):
 class CommentLike(BaseModel):  
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="comment_likes")
     comment_id = models.ForeignKey(Comment, on_delete=models.CASCADE, related_name="likes")  
-    like_status = models.IntegerField(default=0)  
+    like_status = models.BooleanField(default=True)  
 
     class Meta:
         unique_together = ("user_id", "comment_id")
