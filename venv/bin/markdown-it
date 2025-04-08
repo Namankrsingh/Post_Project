@@ -1,4 +1,4 @@
-#!/Users/namankumarsingh/Desktop/code/Django_venv/blog/venv/bin/python3.11
+#!/Users/namankumarsingh/Desktop/code/TDP_Code/Post_Project/venv/bin/python3.12
 # -*- coding: utf-8 -*-
 import re
 import sys
